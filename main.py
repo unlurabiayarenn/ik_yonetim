@@ -1,6 +1,7 @@
 from PyQt5 import QtWidgets
-from ui.ana_pencere import Ui_MainWindow
+from ui.ana_pencere3 import Ui_MainWindow
 from view.calisanlar_view import CalisanlarView
+from view.izinler_view import IzinlerView
 
 class AnaPencere(QtWidgets.QMainWindow):
     def __init__(self):
@@ -11,6 +12,10 @@ class AnaPencere(QtWidgets.QMainWindow):
         # Çalışanlar sekmesini başlat
         self.calisanlar_view = CalisanlarView(self.ui)
         self.ui.tblCalisanlar.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers) #tablo üzerinden veri üzerinde değişiklik yapılamayacak
+
+        # izinler sekmesini başlat
+        self.izinler_view = IzinlerView(self.ui)
+        self.ui.tblzin.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers) #tablo üzerinden veri üzerinde değişiklik yapılamayacak
 
 
 if __name__ == "__main__":

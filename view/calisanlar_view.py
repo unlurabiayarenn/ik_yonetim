@@ -42,6 +42,9 @@ class CalisanlarView:
     def departmanlari_yukle(self):
         departmanlar = departmanlari_getir(self.conn)
         self.ui.calisanDepartman.clear()
+
+        self.ui.calisanDepartman.addItem("Seçiniz", None)
+
         for id_, ad in departmanlar:
             self.ui.calisanDepartman.addItem(ad, id_)
             self.departmanlar_map[ad] = id_
@@ -98,7 +101,8 @@ class CalisanlarView:
         self.ui.calisanAd.clear()
         self.ui.calisanSoyadi.clear()
         self.ui.calisanPozisyon.clear()
-        self.ui.calisanGirisTarihi.setDate(QtCore.QDate.currentDate())
+        self.ui.calisanGirisTarihi.setSpecialValueText("Tarih Seçilmedi")
+        self.ui.calisanGirisTarihi.setDate(QtCore.QDate(2000, 1, 1))
         self.ui.calisanDepartman.setCurrentIndex(0)
         self.calisanlari_yukle()
 
@@ -187,6 +191,9 @@ class CalisanlarView:
         if not ad and not soyad and not pozisyon and departman_adi in ["", "seçiniz"] and not giris_tarihi:
             self.calisanlari_yukle()
             return
+
+        if giris_tarihi == "2000-01-01":
+            giris_tarihi = ""  # Arama filtresine dahil etme
 
         for satir in range(self.ui.tblCalisanlar.rowCount()):
             ad_item = self.ui.tblCalisanlar.item(satir, 1)

@@ -6,12 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>824</width>
-    <height>537</height>
+    <width>1060</width>
+    <height>765</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QWidget" name="horizontalLayoutWidget">
@@ -19,18 +22,21 @@
      <rect>
       <x>10</x>
       <y>9</y>
-      <width>811</width>
-      <height>491</height>
+      <width>1041</width>
+      <height>721</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout_3">
      <item>
       <widget class="QTabWidget" name="tabWidget">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
        <property name="tabPosition">
         <enum>QTabWidget::North</enum>
        </property>
        <property name="currentIndex">
-        <number>0</number>
+        <number>3</number>
        </property>
        <widget class="QWidget" name="tab">
         <attribute name="title">
@@ -40,9 +46,9 @@
          <property name="geometry">
           <rect>
            <x>10</x>
-           <y>200</y>
+           <y>410</y>
            <width>281</width>
-           <height>221</height>
+           <height>251</height>
           </rect>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout">
@@ -69,6 +75,9 @@
           </item>
           <item>
            <widget class="QPushButton" name="calisanAra">
+            <property name="cursor">
+             <cursorShape>ArrowCursor</cursorShape>
+            </property>
             <property name="text">
              <string>Ara</string>
             </property>
@@ -83,91 +92,13 @@
           </item>
          </layout>
         </widget>
-        <widget class="QWidget" name="formLayoutWidget">
-         <property name="geometry">
-          <rect>
-           <x>7</x>
-           <y>10</y>
-           <width>281</width>
-           <height>181</height>
-          </rect>
-         </property>
-         <layout class="QFormLayout" name="formLayout">
-          <item row="0" column="0">
-           <widget class="QLabel" name="label">
-            <property name="text">
-             <string> Adı : </string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="1">
-           <widget class="QLineEdit" name="calisanAd">
-            <property name="text">
-             <string/>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="0">
-           <widget class="QLabel" name="label_2">
-            <property name="text">
-             <string> Soyadı : </string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="1">
-           <widget class="QLineEdit" name="calisanSoyadi">
-            <property name="text">
-             <string/>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="0">
-           <widget class="QLabel" name="label_3">
-            <property name="text">
-             <string>Departmanı : </string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="1">
-           <widget class="QComboBox" name="calisanDepartman"/>
-          </item>
-          <item row="3" column="0">
-           <widget class="QLabel" name="label_4">
-            <property name="text">
-             <string>Pozisyon : </string>
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="0">
-           <widget class="QLabel" name="label_5">
-            <property name="text">
-             <string>İşe Giriş Tarihi :</string>
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="1">
-           <widget class="QDateEdit" name="calisanGirisTarihi">
-            <property name="calendarPopup">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="1">
-           <widget class="QLineEdit" name="calisanPozisyon">
-            <property name="text">
-             <string/>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </widget>
         <widget class="QTableWidget" name="tblCalisanlar">
          <property name="geometry">
           <rect>
-           <x>295</x>
+           <x>305</x>
            <y>11</y>
-           <width>501</width>
-           <height>401</height>
+           <width>701</width>
+           <height>651</height>
           </rect>
          </property>
          <property name="editTriggers">
@@ -210,6 +141,91 @@
           </property>
          </column>
         </widget>
+        <widget class="QWidget" name="formLayoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>40</y>
+           <width>281</width>
+           <height>351</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_6">
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string> Adı : </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="calisanAd">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string> Soyadı : </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="calisanSoyadi">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>Departmanı : </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="calisanDepartman">
+            <property name="contextMenuPolicy">
+             <enum>Qt::DefaultContextMenu</enum>
+            </property>
+            <property name="placeholderText">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_4">
+            <property name="text">
+             <string>Pozisyon : </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="calisanPozisyon">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_5">
+            <property name="text">
+             <string>İşe Giriş Tarihi :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QDateEdit" name="calisanGirisTarihi">
+            <property name="calendarPopup">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
        </widget>
        <widget class="QWidget" name="tab_2">
         <attribute name="title">
@@ -218,80 +234,94 @@
         <widget class="QWidget" name="formLayoutWidget_2">
          <property name="geometry">
           <rect>
-           <x>0</x>
-           <y>0</y>
+           <x>10</x>
+           <y>34</y>
            <width>281</width>
-           <height>204</height>
+           <height>362</height>
           </rect>
          </property>
-         <layout class="QFormLayout" name="formLayout_2">
-          <item row="0" column="0">
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QLabel" name="label_26">
+            <property name="text">
+             <string>Departman Seçimi :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="departmanSecimi"/>
+          </item>
+          <item>
            <widget class="QLabel" name="label_9">
             <property name="text">
              <string>Çalışan Seçimi :</string>
             </property>
            </widget>
           </item>
-          <item row="0" column="1">
+          <item>
            <widget class="QComboBox" name="calisanSecimi"/>
           </item>
-          <item row="2" column="0">
+          <item>
            <widget class="QLabel" name="label_8">
             <property name="text">
              <string>İzin Başlangıç Tarihi: </string>
             </property>
            </widget>
           </item>
-          <item row="2" column="1">
+          <item>
            <widget class="QDateEdit" name="izinBasTarihi">
             <property name="calendarPopup">
              <bool>true</bool>
             </property>
            </widget>
           </item>
-          <item row="4" column="0">
-           <widget class="QLabel" name="label_7">
-            <property name="text">
-             <string>İzin Türü :</string>
-            </property>
-           </widget>
-          </item>
-          <item row="6" column="0">
-           <widget class="QLabel" name="label_6">
-            <property name="text">
-             <string>Onay Durumu: </string>
-            </property>
-           </widget>
-          </item>
-          <item row="6" column="1">
-           <widget class="QComboBox" name="onayDurumu"/>
-          </item>
-          <item row="3" column="0">
+          <item>
            <widget class="QLabel" name="label_10">
             <property name="text">
              <string>İzin Bitiş Tarihi: </string>
             </property>
            </widget>
           </item>
-          <item row="3" column="1">
+          <item>
            <widget class="QDateEdit" name="izinBitTarihi">
             <property name="calendarPopup">
              <bool>true</bool>
             </property>
            </widget>
           </item>
-          <item row="4" column="1">
+          <item>
+           <widget class="QLabel" name="label_7">
+            <property name="text">
+             <string>İzin Türü :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
            <widget class="QLineEdit" name="izinTuru"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_6">
+            <property name="text">
+             <string>Onay Durumu: </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="onayDurumu">
+            <property name="accessibleDescription">
+             <string/>
+            </property>
+           </widget>
           </item>
          </layout>
         </widget>
         <widget class="QWidget" name="verticalLayoutWidget_2">
          <property name="geometry">
           <rect>
-           <x>0</x>
-           <y>200</y>
+           <x>10</x>
+           <y>400</y>
            <width>281</width>
-           <height>201</height>
+           <height>261</height>
           </rect>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -335,11 +365,14 @@
         <widget class="QTableWidget" name="tblzin">
          <property name="geometry">
           <rect>
-           <x>290</x>
-           <y>0</y>
-           <width>511</width>
-           <height>391</height>
+           <x>300</x>
+           <y>10</y>
+           <width>711</width>
+           <height>651</height>
           </rect>
+         </property>
+         <property name="editTriggers">
+          <set>QAbstractItemView::NoEditTriggers</set>
          </property>
          <property name="selectionMode">
           <enum>QAbstractItemView::SingleSelection</enum>
@@ -347,6 +380,11 @@
          <property name="selectionBehavior">
           <enum>QAbstractItemView::SelectRows</enum>
          </property>
+         <column>
+          <property name="text">
+           <string>ID</string>
+          </property>
+         </column>
          <column>
           <property name="text">
            <string>Çalışan</string>
@@ -382,10 +420,13 @@
          <property name="geometry">
           <rect>
            <x>300</x>
-           <y>0</y>
-           <width>501</width>
-           <height>401</height>
+           <y>10</y>
+           <width>711</width>
+           <height>651</height>
           </rect>
+         </property>
+         <property name="editTriggers">
+          <set>QAbstractItemView::NoEditTriggers</set>
          </property>
          <property name="selectionMode">
           <enum>QAbstractItemView::SingleSelection</enum>
@@ -395,12 +436,17 @@
          </property>
          <column>
           <property name="text">
+           <string>ID</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
            <string>Çalışan</string>
           </property>
          </column>
          <column>
           <property name="text">
-           <string>Ay</string>
+           <string>Tarih</string>
           </property>
          </column>
          <column>
@@ -415,6 +461,11 @@
          </column>
          <column>
           <property name="text">
+           <string>Prim</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
            <string>Net Maaş</string>
           </property>
          </column>
@@ -423,9 +474,9 @@
          <property name="geometry">
           <rect>
            <x>10</x>
-           <y>200</y>
+           <y>450</y>
            <width>281</width>
-           <height>201</height>
+           <height>211</height>
           </rect>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -470,58 +521,40 @@
          <property name="geometry">
           <rect>
            <x>10</x>
-           <y>0</y>
+           <y>40</y>
            <width>281</width>
-           <height>194</height>
+           <height>399</height>
           </rect>
          </property>
-         <layout class="QFormLayout" name="formLayout_3">
-          <item row="0" column="0">
+         <layout class="QVBoxLayout" name="verticalLayout_7">
+          <item>
+           <widget class="QLabel" name="label_27">
+            <property name="text">
+             <string>Departman Seçimi :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="departmanSecimi_2"/>
+          </item>
+          <item>
            <widget class="QLabel" name="label_11">
             <property name="text">
              <string>Çalışan (Ad Soyad) : </string>
             </property>
            </widget>
           </item>
-          <item row="1" column="0">
-           <widget class="QLabel" name="label_15">
-            <property name="text">
-             <string>Ay :</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="0">
-           <widget class="QLabel" name="label_16">
-            <property name="text">
-             <string>Brüt Maaş :</string>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="0">
-           <widget class="QLabel" name="label_13">
-            <property name="text">
-             <string> Kesinti :</string>
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="0">
-           <widget class="QLabel" name="label_14">
-            <property name="text">
-             <string>Prim :</string>
-            </property>
-           </widget>
-          </item>
-          <item row="5" column="0">
-           <widget class="QLabel" name="label_12">
-            <property name="text">
-             <string>Net Maaş :</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="1">
+          <item>
            <widget class="QComboBox" name="calisanSecimi_Maas"/>
           </item>
-          <item row="1" column="1">
+          <item>
+           <widget class="QLabel" name="label_15">
+            <property name="text">
+             <string>Tarih :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
            <widget class="QDateEdit" name="maasAy">
             <property name="currentSection">
              <enum>QDateTimeEdit::MonthSection</enum>
@@ -534,16 +567,44 @@
             </property>
            </widget>
           </item>
-          <item row="2" column="1">
+          <item>
+           <widget class="QLabel" name="label_16">
+            <property name="text">
+             <string>Brüt Maaş :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
            <widget class="QLineEdit" name="brutMaas"/>
           </item>
-          <item row="3" column="1">
+          <item>
+           <widget class="QLabel" name="label_13">
+            <property name="text">
+             <string> Kesinti :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
            <widget class="QLineEdit" name="kesintiMaas"/>
           </item>
-          <item row="4" column="1">
+          <item>
+           <widget class="QLabel" name="label_14">
+            <property name="text">
+             <string>Prim :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
            <widget class="QLineEdit" name="maasPrim"/>
           </item>
-          <item row="5" column="1">
+          <item>
+           <widget class="QLabel" name="label_12">
+            <property name="text">
+             <string>Net Maaş :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
            <widget class="QLineEdit" name="netMaas"/>
           </item>
          </layout>
@@ -556,31 +617,41 @@
         <widget class="QWidget" name="formLayoutWidget_4">
          <property name="geometry">
           <rect>
-           <x>-10</x>
-           <y>0</y>
-           <width>291</width>
-           <height>121</height>
+           <x>10</x>
+           <y>40</y>
+           <width>281</width>
+           <height>371</height>
           </rect>
          </property>
-         <layout class="QFormLayout" name="perfForm">
-          <item row="0" column="0">
+         <layout class="QVBoxLayout" name="verticalLayout_8">
+          <item>
+           <widget class="QLabel" name="label_28">
+            <property name="text">
+             <string>Departman Seçimi :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="departmanSecimi_3"/>
+          </item>
+          <item>
            <widget class="QLabel" name="label_17">
             <property name="text">
              <string>Çalışan (Ad Soyad) : </string>
             </property>
            </widget>
           </item>
-          <item row="0" column="1">
+          <item>
            <widget class="QComboBox" name="calisanSecimi_perf"/>
           </item>
-          <item row="1" column="0">
+          <item>
            <widget class="QLabel" name="label_18">
             <property name="text">
-             <string>Ay/Yıl :</string>
+             <string>Tarih :</string>
             </property>
            </widget>
           </item>
-          <item row="1" column="1">
+          <item>
            <widget class="QDateEdit" name="perfTarih">
             <property name="displayFormat">
              <string>MM.yyyy</string>
@@ -590,28 +661,16 @@
             </property>
            </widget>
           </item>
-          <item row="2" column="0">
+          <item>
            <widget class="QLabel" name="label_19">
             <property name="text">
              <string> Puan : </string>
             </property>
            </widget>
           </item>
-          <item row="2" column="1">
+          <item>
            <widget class="QSpinBox" name="puanPerf"/>
           </item>
-         </layout>
-        </widget>
-        <widget class="QWidget" name="verticalLayoutWidget_4">
-         <property name="geometry">
-          <rect>
-           <x>0</x>
-           <y>100</y>
-           <width>281</width>
-           <height>277</height>
-          </rect>
-         </property>
-         <layout class="QVBoxLayout" name="verticalLayout_5">
           <item>
            <widget class="QLabel" name="label_20">
             <property name="text">
@@ -622,6 +681,18 @@
           <item>
            <widget class="QTextEdit" name="yorum_perf"/>
           </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="verticalLayoutWidget_4">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>426</y>
+           <width>281</width>
+           <height>231</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_5">
           <item>
            <widget class="QPushButton" name="yorumEkle">
             <property name="text">
@@ -662,11 +733,14 @@
         <widget class="QTableWidget" name="tblPerf">
          <property name="geometry">
           <rect>
-           <x>290</x>
-           <y>0</y>
-           <width>501</width>
-           <height>371</height>
+           <x>300</x>
+           <y>10</y>
+           <width>711</width>
+           <height>651</height>
           </rect>
+         </property>
+         <property name="editTriggers">
+          <set>QAbstractItemView::NoEditTriggers</set>
          </property>
          <property name="selectionMode">
           <enum>QAbstractItemView::SingleSelection</enum>
@@ -676,12 +750,17 @@
          </property>
          <column>
           <property name="text">
+           <string>ID</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
            <string>Çalışan</string>
           </property>
          </column>
          <column>
           <property name="text">
-           <string>Ay</string>
+           <string>Tarih</string>
           </property>
          </column>
          <column>
@@ -700,12 +779,12 @@
         <attribute name="title">
          <string>Eğitimler</string>
         </attribute>
-        <widget class="QGroupBox" name="groupBox">
+        <widget class="QGroupBox" name="groupBox_egitimEkle">
          <property name="geometry">
           <rect>
            <x>0</x>
-           <y>0</y>
-           <width>261</width>
+           <y>20</y>
+           <width>291</width>
            <height>211</height>
           </rect>
          </property>
@@ -765,20 +844,18 @@
         <widget class="QTableWidget" name="tblEgitimler">
          <property name="geometry">
           <rect>
-           <x>270</x>
+           <x>300</x>
            <y>10</y>
-           <width>531</width>
-           <height>201</height>
+           <width>711</width>
+           <height>261</height>
           </rect>
+         </property>
+         <property name="editTriggers">
+          <set>QAbstractItemView::NoEditTriggers</set>
          </property>
          <column>
           <property name="text">
-           <string>Eğitim ID</string>
-          </property>
-         </column>
-         <column>
-          <property name="text">
-           <string>Tarih</string>
+           <string>ID</string>
           </property>
          </column>
          <column>
@@ -788,17 +865,22 @@
          </column>
          <column>
           <property name="text">
-           <string>Eğitmen</string>
+           <string>Eğitmen Adı</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Tarih</string>
           </property>
          </column>
         </widget>
-        <widget class="QGroupBox" name="groupBox_2">
+        <widget class="QGroupBox" name="groupBox_katilimEkle">
          <property name="geometry">
           <rect>
            <x>0</x>
-           <y>240</y>
-           <width>261</width>
-           <height>201</height>
+           <y>300</y>
+           <width>291</width>
+           <height>221</height>
           </rect>
          </property>
          <property name="title">
@@ -843,11 +925,14 @@
         <widget class="QTableWidget" name="tblKatilimListesi">
          <property name="geometry">
           <rect>
-           <x>270</x>
-           <y>240</y>
-           <width>531</width>
-           <height>201</height>
+           <x>300</x>
+           <y>290</y>
+           <width>711</width>
+           <height>381</height>
           </rect>
+         </property>
+         <property name="editTriggers">
+          <set>QAbstractItemView::NoEditTriggers</set>
          </property>
          <column>
           <property name="text">
@@ -865,6 +950,11 @@
           </property>
          </column>
         </widget>
+       </widget>
+       <widget class="QWidget" name="tab_6">
+        <attribute name="title">
+         <string>Raporlar</string>
+        </attribute>
        </widget>
       </widget>
      </item>
