@@ -10,6 +10,7 @@ def create_tables():
     conn = connect()
     cursor = conn.cursor()
 
+    #Departmanlar
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS Departmanlar (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -17,7 +18,7 @@ def create_tables():
         yonetici_id INTEGER
     )
     """)
-
+    #Calisanlar
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS Calisanlar (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -30,6 +31,7 @@ def create_tables():
     )
     """)
 
+    #Izinler
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS Izinler (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -42,6 +44,7 @@ def create_tables():
     )
     """)
 
+    #Maaslar
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS Maaslar (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -55,6 +58,7 @@ def create_tables():
     )
     """)
 
+    #Egitimler
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS Egitimler (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -64,6 +68,7 @@ def create_tables():
     )
     """)
 
+    #Egitim_Katilim
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS Egitim_Katilim (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -74,6 +79,7 @@ def create_tables():
     )
     """)
 
+    #Performans
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS Performans (
         id INTEGER PRIMARY KEY AUTOINCREMENT,

@@ -2,6 +2,8 @@ from PyQt5 import QtWidgets
 from ui.ana_pencere3 import Ui_MainWindow
 from view.calisanlar_view import CalisanlarView
 from view.izinler_view import IzinlerView
+from view.maaslar_view import MaaslarView
+
 
 class AnaPencere(QtWidgets.QMainWindow):
     def __init__(self):
@@ -16,6 +18,10 @@ class AnaPencere(QtWidgets.QMainWindow):
         # izinler sekmesini başlat
         self.izinler_view = IzinlerView(self.ui)
         self.ui.tblzin.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers) #tablo üzerinden veri üzerinde değişiklik yapılamayacak
+
+        self.maaslar_view = MaaslarView(self.ui)
+        self.ui.tblMaas.setEditTriggers(
+            QtWidgets.QAbstractItemView.NoEditTriggers)  # tablo üzerinden veri üzerinde değişiklik yapılamayacak
 
 
 if __name__ == "__main__":
