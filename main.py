@@ -1,8 +1,9 @@
 from PyQt5 import QtWidgets
-from ui.ana_pencere3 import Ui_MainWindow
+from ui.ana_pencere4 import Ui_MainWindow
 from view.calisanlar_view import CalisanlarView
 from view.izinler_view import IzinlerView
 from view.maaslar_view import MaaslarView
+from view.performanslar_view import PerformanslarView
 
 
 class AnaPencere(QtWidgets.QMainWindow):
@@ -21,6 +22,10 @@ class AnaPencere(QtWidgets.QMainWindow):
 
         self.maaslar_view = MaaslarView(self.ui)
         self.ui.tblMaas.setEditTriggers(
+            QtWidgets.QAbstractItemView.NoEditTriggers)  # tablo üzerinden veri üzerinde değişiklik yapılamayacak
+
+        self.performanslar_view = PerformanslarView(self.ui)
+        self.ui.tblPerf.setEditTriggers(
             QtWidgets.QAbstractItemView.NoEditTriggers)  # tablo üzerinden veri üzerinde değişiklik yapılamayacak
 
 
