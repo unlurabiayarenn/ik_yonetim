@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1060</width>
-    <height>765</height>
+    <height>629</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -36,7 +36,7 @@
         <enum>QTabWidget::North</enum>
        </property>
        <property name="currentIndex">
-        <number>4</number>
+        <number>5</number>
        </property>
        <widget class="QWidget" name="tab">
         <attribute name="title">
@@ -965,6 +965,113 @@
         <attribute name="title">
          <string>Raporlar</string>
         </attribute>
+        <widget class="QTableWidget" name="tblRapor">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>90</y>
+           <width>951</width>
+           <height>461</height>
+          </rect>
+         </property>
+         <column>
+          <property name="text">
+           <string>ID</string>
+          </property>
+         </column>
+        </widget>
+        <widget class="QWidget" name="horizontalLayoutWidget_2">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>612</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <item>
+           <widget class="QLabel" name="label_30">
+            <property name="text">
+             <string>Departman : </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="departmanSecimi_4"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_31">
+            <property name="text">
+             <string>Çalışanlar :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="calisanSecimi_2"/>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="formLayoutWidget_5">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>40</y>
+           <width>611</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QLabel" name="label_33">
+            <property name="text">
+             <string>Sayfalar :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="izinCB">
+            <property name="text">
+             <string>İzinler</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="maasCB">
+            <property name="text">
+             <string>Maaşlar</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="performansCB">
+            <property name="text">
+             <string>Performans</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="egitimveKatilmaCB">
+            <property name="text">
+             <string>Eğitimler ve Katılma Durumu</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QPushButton" name="btnRaporOlustur">
+         <property name="geometry">
+          <rect>
+           <x>620</x>
+           <y>40</y>
+           <width>331</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Rapor Olustur</string>
+         </property>
+        </widget>
        </widget>
       </widget>
      </item>

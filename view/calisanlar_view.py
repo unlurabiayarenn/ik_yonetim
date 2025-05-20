@@ -1,4 +1,4 @@
-from PyQt5 import QtWidgets, QtCore  # QtCore eklendi
+from PyQt5 import QtWidgets, QtCore
 from controller.calisanlar_controller import calisanlari_getir, departmanlari_getir
 
 class CalisanlarView:
@@ -36,7 +36,7 @@ class CalisanlarView:
             self.ui.tblCalisanlar.insertRow(row_index)
             for col_index, data in enumerate(row_data):
                 self.ui.tblCalisanlar.setItem(row_index, col_index, QtWidgets.QTableWidgetItem(str(data)))
-            self.ui.tblCalisanlar.setRowHidden(row_index, False)  # ⭐ Satırı görünür hale getir
+            self.ui.tblCalisanlar.setRowHidden(row_index, False)  #Satırı görünür hale getir
         self.ui.tblCalisanlar.setColumnHidden(0, True)
 
     def departmanlari_yukle(self):
@@ -56,7 +56,7 @@ class CalisanlarView:
         giris_tarihi = self.ui.calisanGirisTarihi.date().toString("yyyy-MM-dd")
         departman_id = self.ui.calisanDepartman.currentData()
 
-        # ✅ Form doğrulama
+        #Form doğrulama
         if not ad or not soyad or not pozisyon or departman_id is None:
             QtWidgets.QMessageBox.warning(None, "Eksik Bilgi", "Lütfen tüm alanları doldurun.")
             return
